@@ -1,0 +1,9 @@
+comandos:
+crear un proyecto desde el cmd:
+django-admin startproject myproyect
+
+iniciar el servidor local:
+python manage.py runserver
+
+crear una app:
+python manage.py startapp myapp
