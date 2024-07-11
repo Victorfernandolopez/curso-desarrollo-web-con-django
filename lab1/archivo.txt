@@ -1,0 +1,13 @@
+pasos a seguir
+1- crear el proyecto desde la consola cmd (django-admin startproject lab1)
+2- crear la app desde la consola cmd (python manage.py startapp ejercicio1)
+3- abrir el proyecto en visual studio
+4- configurar SETTING/ INSTALLED_APPS: agregar la app ejercicio1 ('ejercicio1.apps.Ejercicio1Config')
+5- crear el archivo urls.py en la app y configurar de la siguiente manera:
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path("", views.index, name = "index")
+    ]
+6- hacer las migraciones (python manage.py migrate)

@@ -7,3 +7,9 @@ python manage.py runserver
 
 crear una app:
 python manage.py startapp myapp
+
+conectar con mysql
+pip install mysql-connector-python
+
+conectar con el cliente de mysql:
+pip install mysqlclient
