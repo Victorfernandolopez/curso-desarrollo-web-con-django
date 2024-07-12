@@ -1,0 +1,17 @@
+<html>
+    <title>Lista de Cursos</title>
+    <table>
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>inscriptos</th>
+            </tr>
+        </thead>
+        {% for nombre, inscriptos in cursos %}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{inscriptos}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</html>

@@ -1,0 +1,13 @@
+{% load static %}
+<head>
+    <title>"alumnos"</title>
+    <h1>Lista de Alumnos</h1>
+</head>
+<img src='{% static "cotDolarApp/208-2081416_django-development-png-transparent-django-logo-png-download.png" %}'>
+<body>
+    <ul>{% for alumno in alumnos %}
+        <li>{{alumno}}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
