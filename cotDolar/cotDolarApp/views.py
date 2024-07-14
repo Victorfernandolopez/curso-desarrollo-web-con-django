@@ -1,5 +1,5 @@
 import sqlite3
-from django.http import HttpResponseRedirect,HttpResponse, request
+from django.http import HttpResponseRedirect,HttpResponse, request, Http404
 from django.shortcuts import render
 def index(request):
     ctx = {"nombre" : "juan"}
@@ -25,3 +25,14 @@ def cursos (request):
     conn.close()
     ctx = {"cursos": cursos}
     return render(request,"cotDolarApp/cursos.html", ctx)
+
+def curso (request,nombre_curso):
+    conn = sqlite3.connect("db.sqlite3")
+    cursor = conn.cursor()
+    cursor.execute("SELECT nombreCurso, cantInscriptos FROM cursos_listado where nombreCurso=?", [nombre_curso])
+    curso = cursor.fetchone()
+    if curso is None:
+        raise http404
+    ctx = {"curso1" : curso}
+    conn.close()
+    return render(request,"cotDolarApp/curso.html", ctx)

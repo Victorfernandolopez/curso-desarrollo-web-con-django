@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}
+            Mi aplicacion de django
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+        <main>
+            {% block content %}
+            <img src='{% static "cotDolarApp/208-2081416_django-development-png-transparent-django-logo-png-download.png" %}'>
+            {% endblock %}
+        </main>
+        <footer>
+            <small> &copy; Mi aplicacion de django</small>
+        </footer>
+    </body>
+</html>

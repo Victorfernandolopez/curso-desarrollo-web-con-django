@@ -1,17 +1,24 @@
+{% load static %}
 <html>
-    <title>Lista de Cursos</title>
-    <table>
-        <thead>
-            <tr>
-                <th>Curso</th>
-                <th>inscriptos</th>
-            </tr>
-        </thead>
-        {% for nombre, inscriptos in cursos %}
-            <tr>
-                <td>{{nombre}}</td>
-                <td>{{inscriptos}}</td>
-            </tr>
-        {% endfor %}
-    </table>
+    <head>
+        <title>Lista de Cursos</title>
+        <link rel="stylesheet" type="text/css" href='{% static "cotDolarApp/styles.css" %}'>
+    </head>
+    <body>
+        <table class="tabla-cursos">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cursos inscriptos</th>
+                </tr>
+            </thead>
+            {% for nombre, inscriptos in cursos %}
+                <tr>
+                    <td align="center">{{nombre}}</td>
+                    <td align="center">{{inscriptos}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+
 </html>
